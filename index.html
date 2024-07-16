@@ -28,6 +28,32 @@
   <title>Dhruvil Shah</title>
 
   <style>
+    .social-icons a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social-icons a:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 150%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: currentColor;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.social-icons a:hover::after {
+    opacity: 1;
+}
+
     mark { 
       background-color: rgb(255, 255, 255);
       color: rgb(0, 0, 0);
